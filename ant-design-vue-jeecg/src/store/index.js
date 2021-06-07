@@ -7,7 +7,8 @@ import permission from './modules/permission'
 import enhance from './modules/enhance'
 import online from './modules/online'
 import getters from './getters'
-
+import createLogger from 'vuex/dist/logger'
+const debug = process.env.NODE_ENV !== 'production'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -18,14 +19,9 @@ export default new Vuex.Store({
     enhance,
     online
   },
-  state: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  },
-  getters
+  state: {},
+  mutations: {},
+  actions: {},
+  getters,
+  plugins: debug ? [createLogger()] : []
 })
