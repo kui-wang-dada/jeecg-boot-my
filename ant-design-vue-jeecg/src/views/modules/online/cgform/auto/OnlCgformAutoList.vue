@@ -246,7 +246,6 @@ export default {
       queryInfo: [],
       queryParam: {},
       toggleSearchStatus: false,
-
       table: {
         loading: true,
         // 表头
